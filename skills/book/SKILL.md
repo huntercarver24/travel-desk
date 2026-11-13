@@ -84,7 +84,13 @@ Hotel:
 }
 ```
 
-`cost.miles` and `cost.taxes_usd` are totals for all passengers. `status` is `booked`, `completed`, or `cancelled`. Times are local, 24-hour; `+1` means next day. Leave unknown fields empty rather than guessing.
+`cost` is a total for all passengers, in one of three forms:
+
+- points award: `{ "miles": 220000, "taxes_usd": 760 }`
+- cash fare: `{ "cash_usd": 2708 }` (then `paid_with` is `cash` and `cash_price_at_booking` equals it)
+- hotel points: `{ "points": 35000, "per_night": true }`
+
+`status` is `booked`, `completed`, or `cancelled`. Times are local, 24-hour; `+1` means next day. Leave unknown fields empty rather than guessing.
 
 ## Step 4: Update the consult and the client
 
