@@ -40,7 +40,7 @@ You need:
 Then:
 
 ```bash
-git clone <this repository> ~/travel-desk
+git clone https://github.com/huntercarver24/travel-desk.git ~/travel-desk
 cd ~/travel-desk
 bash install.sh
 ```
@@ -54,12 +54,14 @@ The installer:
 
 Keep the clone where it is. The plugin loads from this folder, so moving or deleting it removes the plugin. To update later: `cd ~/travel-desk && git pull`, then `/reload-plugins` inside Claude Code.
 
+To have Claude Code pull the plugin from GitHub instead of the local folder (updates then come through `claude plugin update travel-desk`), run the installer as `TRAVEL_DESK_SOURCE=huntercarver24/travel-desk bash install.sh`. The repository must be reachable from that machine: public, or signed in with `gh auth login`.
+
 Manual equivalent, inside Claude Code:
 
 ```
 /plugin marketplace add borski/travel-hacking-toolkit
 /plugin install travel-hacker@borski
-/plugin marketplace add ~/travel-desk
+/plugin marketplace add ~/travel-desk        (or: huntercarver24/travel-desk)
 /plugin install travel-desk@travel-desk
 ```
 
