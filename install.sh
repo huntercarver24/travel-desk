@@ -76,9 +76,14 @@ if [[ "$(uname)" == "Darwin" && -d "$HOME/Desktop" ]]; then
   cat > "$LAUNCHER" <<LAUNCH
 #!/bin/bash
 # Opens Claude Code inside the Travel Desk folder.
+# A double-clicked .command runs in a bare shell without your PATH, so find claude explicitly.
 cd "$DESK" || exit 1
 export TRAVEL_DESK_HOME="$DESK"
-exec claude
+for c in "\$HOME/.local/bin/claude" /opt/homebrew/bin/claude /usr/local/bin/claude "\$HOME/.claude/local/claude" "\$(command -v claude 2>/dev/null)"; do
+  if [ -n "\$c" ] && [ -x "\$c" ]; then exec "\$c"; fi
+done
+echo "Claude Code was not found. Install it from https://claude.com/claude-code and try again."
+read -r -p "Press Return to close."
 LAUNCH
   chmod +x "$LAUNCHER"
   note "Added '$LAUNCHER'. Double-click it to open the desk."
