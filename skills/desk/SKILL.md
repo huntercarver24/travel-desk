@@ -2,7 +2,7 @@
 name: desk
 description: The morning view of the travel desk. Shows clients, departures in the next two weeks, bookings due for an audit, holds about to expire, and consults waiting on a proposal or a client's yes. Use when the user says "desk", "what needs attention", "morning", "show my clients", "status", or asks about a specific client ("what's going on with the Hendersons", "show me <client>").
 argument-hint: "[client] [--days N]"
-allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *)
+allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *), Bash(python3 "${CLAUDE_PLUGIN_ROOT}/scripts/desk.py" *)
 ---
 
 # The desk

@@ -2,7 +2,7 @@
 name: consult
 description: Run a points-vs-cash consult for a client's trip. Loads the client's balances and cards, searches award seats and cash fares through the Travel Hacking Toolkit, keeps only awards the client can actually reach with their points, does the cents-per-point math, and writes up the recommended play with transfer and booking steps. Saves the consult to the desk. Use when the user asks what a client should do for a flight or trip, says "consult", "best play for <client>", "can <client> get to <place> on points", or asks about award seats or cash fares for a client.
 argument-hint: "<client> <destination, dates, travelers, cabin>"
-allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *)
+allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *), Bash(python3 "${CLAUDE_PLUGIN_ROOT}/scripts/desk.py" *)
 ---
 
 # Client consult

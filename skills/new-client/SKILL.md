@@ -2,7 +2,7 @@
 name: new-client
 description: Create or update a client file on the travel desk, covering who they are, home airports, who travels, usual cabin, which credit cards they hold, points and miles balances by program, and preferences. Use when the user says "new client", "add a client", "client intake", "update <client>'s points", "<client> now has X points", or mentions a client the desk doesn't know yet.
 argument-hint: "<client name> [details in plain English]"
-allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *)
+allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *), Bash(python3 "${CLAUDE_PLUGIN_ROOT}/scripts/desk.py" *)
 ---
 
 # New client / update client

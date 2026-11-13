@@ -2,7 +2,7 @@
 name: setup
 description: First-run setup for Travel Desk. Checks that the Travel Hacking Toolkit is installed, creates the desk folder, records the agency's details for proposals, explains which API keys matter for a travel agent, and shows what to try first. Run on first use or when the user says "set up travel desk", "get started", or "setup".
 disable-model-invocation: true
-allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *)
+allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *), Bash(python3 "${CLAUDE_PLUGIN_ROOT}/scripts/desk.py" *)
 ---
 
 # Travel Desk setup

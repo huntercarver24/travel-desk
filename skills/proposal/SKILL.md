@@ -2,7 +2,7 @@
 name: proposal
 description: Turn a saved consult into a client-ready proposal document with the agency's branding, covering the trip, two or three options in plain English, the recommendation, what the client pays in cash and points, and what happens next. Renders to HTML that prints cleanly to PDF. Use when the user says "proposal", "write this up for the client", "client version", "something I can send <client>", or "make the PDF".
 argument-hint: "<client or consult file> [notes on tone or options to include]"
-allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *)
+allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *), Bash(python3 "${CLAUDE_PLUGIN_ROOT}/scripts/desk.py" *)
 ---
 
 # Client proposal

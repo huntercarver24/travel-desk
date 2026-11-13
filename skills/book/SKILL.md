@@ -2,7 +2,7 @@
 name: book
 description: Record a booked reservation (flight or hotel) for a client so the desk can audit it later for price drops, schedule changes, and better cabins. Also updates the consult and the client's balances. Use when the user says "booked", "ticketed", "record this booking", "log the reservation", "confirmation", or pastes a confirmation email.
 argument-hint: "<client> <confirmation code and details>"
-allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *)
+allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *), Bash(python3 "${CLAUDE_PLUGIN_ROOT}/scripts/desk.py" *)
 ---
 
 # Record a booking

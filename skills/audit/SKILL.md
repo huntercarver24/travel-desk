@@ -2,7 +2,7 @@
 name: audit
 description: Audit clients' upcoming bookings for price drops, better cabins, better routings, schedule changes, and seat problems, using the Travel Hacking Toolkit's gardening checklist, then write a report with a client-outreach list. Works across all clients or one. Use when the user says "audit", "garden", "check the bookings", "any price drops", "did anything change", "morning check", or when the desk shows bookings due.
 argument-hint: "[client] [--all]"
-allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *)
+allowed-tools: Bash(python3 ${CLAUDE_PLUGIN_ROOT}/scripts/desk.py *), Bash(python3 "${CLAUDE_PLUGIN_ROOT}/scripts/desk.py" *)
 ---
 
 # Booking audit
