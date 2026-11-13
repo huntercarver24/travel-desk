@@ -1,0 +1,42 @@
+{
+  "_meta": {
+    "description": "Canonical balance keys for client files. Each key maps to the Travel Hacking Toolkit's data files: transfer_key is the issuer key in data/transfer-partners.json, valuation_key is the key in data/points-valuations.json, seats_source is the seats.aero program source where one exists.",
+    "kinds": ["card", "airline", "hotel"]
+  },
+  "programs": {
+    "chase_ur":        { "display": "Chase Ultimate Rewards",           "kind": "card",    "transfer_key": "chase_ur",    "valuation_key": "chase_ultimate_rewards" },
+    "amex_mr":         { "display": "American Express Membership Rewards", "kind": "card", "transfer_key": "amex_mr",     "valuation_key": "amex_membership_rewards" },
+    "bilt":            { "display": "Bilt Rewards",                     "kind": "card",    "transfer_key": "bilt",        "valuation_key": "bilt_rewards" },
+    "capital_one":     { "display": "Capital One Miles",                "kind": "card",    "transfer_key": "capital_one", "valuation_key": "capital_one" },
+    "citi_ty":         { "display": "Citi ThankYou Points",             "kind": "card",    "transfer_key": "citi_ty",     "valuation_key": "citi_thankyou" },
+    "wells_fargo":     { "display": "Wells Fargo Rewards",              "kind": "card",    "transfer_key": "wells_fargo", "valuation_key": "wells_fargo" },
+
+    "aeroplan":        { "display": "Air Canada Aeroplan",              "kind": "airline", "valuation_key": "aeroplan",        "seats_source": "aeroplan" },
+    "alaska":          { "display": "Alaska Atmos Rewards",             "kind": "airline", "valuation_key": "alaska",          "seats_source": "alaska" },
+    "american":        { "display": "American AAdvantage",              "kind": "airline", "valuation_key": "american",        "seats_source": "american" },
+    "ana":             { "display": "ANA Mileage Club",                 "kind": "airline", "valuation_key": "ana" },
+    "avianca":         { "display": "Avianca LifeMiles",                "kind": "airline", "valuation_key": "avianca",         "seats_source": "lifemiles" },
+    "avios":           { "display": "British Airways / Iberia / Qatar Avios", "kind": "airline", "valuation_key": "avios" },
+    "cathay":          { "display": "Cathay Pacific Asia Miles",        "kind": "airline", "valuation_key": "cathay" },
+    "delta":           { "display": "Delta SkyMiles",                   "kind": "airline", "valuation_key": "delta",           "seats_source": "delta" },
+    "emirates":        { "display": "Emirates Skywards",                "kind": "airline", "valuation_key": "emirates",        "seats_source": "emirates" },
+    "etihad":          { "display": "Etihad Guest",                     "kind": "airline", "valuation_key": "etihad",          "seats_source": "etihad" },
+    "flying_blue":     { "display": "Air France / KLM Flying Blue",     "kind": "airline", "valuation_key": "flying_blue",     "seats_source": "flyingblue" },
+    "jetblue":         { "display": "JetBlue TrueBlue",                 "kind": "airline", "valuation_key": "jetblue",         "seats_source": "jetblue" },
+    "lufthansa":       { "display": "Lufthansa Miles & More",           "kind": "airline", "valuation_key": "lufthansa",       "seats_source": "lufthansa" },
+    "qantas":          { "display": "Qantas Frequent Flyer",            "kind": "airline", "valuation_key": "qantas",          "seats_source": "qantas" },
+    "singapore":       { "display": "Singapore KrisFlyer",              "kind": "airline", "valuation_key": "singapore",       "seats_source": "singapore" },
+    "southwest":       { "display": "Southwest Rapid Rewards",          "kind": "airline", "valuation_key": "southwest" },
+    "turkish":         { "display": "Turkish Miles&Smiles",             "kind": "airline", "valuation_key": "turkish",         "seats_source": "turkish" },
+    "united":          { "display": "United MileagePlus",               "kind": "airline", "valuation_key": "united",          "seats_source": "united" },
+    "virgin_atlantic": { "display": "Virgin Atlantic Flying Club",      "kind": "airline", "valuation_key": "virgin_atlantic", "seats_source": "virginatlantic" },
+
+    "hyatt":           { "display": "World of Hyatt",                   "kind": "hotel",   "valuation_key": "hyatt" },
+    "hilton":          { "display": "Hilton Honors",                    "kind": "hotel",   "valuation_key": "hilton" },
+    "ihg":             { "display": "IHG One Rewards",                  "kind": "hotel",   "valuation_key": "ihg" },
+    "marriott":        { "display": "Marriott Bonvoy",                  "kind": "hotel",   "valuation_key": "marriott" },
+    "wyndham":         { "display": "Wyndham Rewards",                  "kind": "hotel",   "valuation_key": "wyndham" },
+    "choice":          { "display": "Choice Privileges",                "kind": "hotel",   "valuation_key": "choice" },
+    "accor":           { "display": "Accor Live Limitless",             "kind": "hotel",   "valuation_key": "accor" }
+  }
+}

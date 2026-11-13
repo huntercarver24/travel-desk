@@ -1,0 +1,39 @@
+{
+  "name": "travel-desk",
+  "owner": {
+    "name": "Hunter Carver"
+  },
+  "metadata": {
+    "description": "Travel Desk: client management, consults, proposals, and booking audits for a travel agent, built on the Travel Hacking Toolkit."
+  },
+  "allowCrossMarketplaceDependenciesOn": [
+    "borski"
+  ],
+  "plugins": [
+    {
+      "name": "travel-desk",
+      "source": "./",
+      "description": "A travel agent's desk on top of the Travel Hacking Toolkit: client files, points-vs-cash consults, client-ready proposals, booking records, and cross-client trip audits.",
+      "author": {
+        "name": "Hunter Carver"
+      },
+      "license": "MIT",
+      "keywords": [
+        "travel",
+        "travel-agent",
+        "award-travel",
+        "points",
+        "miles",
+        "clients",
+        "proposals"
+      ],
+      "category": "productivity",
+      "dependencies": [
+        {
+          "name": "travel-hacker",
+          "marketplace": "borski"
+        }
+      ]
+    }
+  ]
+}

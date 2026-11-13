@@ -1,0 +1,7 @@
+# Never commit client data. The desk lives in ~/TravelDesk (or $TRAVEL_DESK_HOME), not here.
+TravelDesk/
+*.pyc
+__pycache__/
+.DS_Store
+# local test output
+/tmp-desk/

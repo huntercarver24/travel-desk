@@ -1,0 +1,29 @@
+{
+  "name": "Dana and Mark Henderson",
+  "slug": "hendersons",
+  "created": "2026-11-12",
+  "updated": "2026-11-12",
+  "contact": { "email": "", "phone": "" },
+  "home_airports": ["SFO", "OAK"],
+  "travelers": [
+    { "name": "Dana", "type": "adult" },
+    { "name": "Mark", "type": "adult" }
+  ],
+  "default_cabin": "business",
+  "cards": ["Chase Sapphire Reserve", "Amex Platinum"],
+  "balances": { "chase_ur": 120000, "amex_mr": 80000, "united": 16000, "hyatt": 30000 },
+  "balances_other": {},
+  "balances_as_of": "2026-11-12",
+  "preferences": {
+    "nonstop_only": false,
+    "max_stops": 1,
+    "no_redeyes": true,
+    "seat": "aisle",
+    "airlines_prefer": [],
+    "airlines_avoid": [],
+    "notes": "Mark needs extra legroom; knee surgery in 2025."
+  },
+  "notes": [
+    "2026-11-12: Anniversary trip to Rome next May. Want business class if the points stretch."
+  ]
+}

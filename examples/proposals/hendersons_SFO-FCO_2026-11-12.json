@@ -1,0 +1,68 @@
+{
+  "title": "Rome in Business Class",
+  "client": { "name": "Dana and Mark", "slug": "hendersons" },
+  "prepared_on": "2026-11-12",
+  "trip": {
+    "route": "San Francisco → Rome",
+    "dates": "May 18 – May 28, 2027",
+    "travelers": "2 adults",
+    "cabin": "Business class",
+    "flexibility": "Within a day or two of these dates"
+  },
+  "summary": "Your Chase points can cover both business-class seats to Rome and back, with about $380 per person in taxes. Paying cash for the same seats runs about $4,900 per person, so this is one of the best uses of your points we've seen.",
+  "options": [
+    {
+      "recommended": true,
+      "label": "Recommended",
+      "name": "Air France business class via Flying Blue",
+      "how": "Move 110,000 Chase points per person to Air France/KLM Flying Blue, then we book the seats in your Flying Blue account.",
+      "routing": "SFO → Paris → Rome outbound, Rome → Paris → SFO home. One change each way, lie-flat seats on the ocean legs.",
+      "points": "110,000 Chase points per person (220,000 total)",
+      "cash": "About $380 per person in taxes and fees",
+      "value": "Roughly 4.1 cents per point. Anything above 2 is a good use of Chase points.",
+      "notes": "Seats were available on your dates as of November 12. We confirm them again on the phone with you before any points move."
+    },
+    {
+      "label": "Also good",
+      "name": "United Polaris via United MileagePlus",
+      "how": "Move 72,000 Chase points per person to United, combined with the 16,000 United miles you already have.",
+      "routing": "Nonstop SFO → Rome on United, nonstop home.",
+      "points": "88,000 United miles per person",
+      "cash": "About $90 per person in taxes",
+      "value": "Roughly 5.4 cents per point, but only two seats showed and only on May 19 outbound.",
+      "notes": "Best value if the May 19 departure works for you."
+    },
+    {
+      "label": "Cash",
+      "name": "Delta One business class, paid fare",
+      "how": "We book it for you; no points involved.",
+      "points": "None",
+      "cash": "About $4,900 per person",
+      "value": "Keeps all 200,000 of your points for a future trip.",
+      "notes": "Refundable fares run higher; ask if you want that option."
+    }
+  ],
+  "cash_benchmark": "The lowest business-class cash fare we found for these dates is about $4,900 per person round trip.",
+  "why": [
+    "Your points cover both seats with room to spare; you'd keep about 10,000 Chase points and all 80,000 Amex points.",
+    "No red-eye on the way out, which you asked us to avoid.",
+    "Air France's business seat is a fully flat bed on both ocean legs."
+  ],
+  "balances_after": [
+    { "program": "Chase Ultimate Rewards", "before": 120000, "after": 10000 },
+    { "program": "American Express Membership Rewards", "before": 80000, "after": 80000 },
+    { "program": "United MileagePlus", "before": 16000, "after": 16000 }
+  ],
+  "next_steps": [
+    "Reply with the option you'd like, or call us with questions.",
+    "We schedule a 15-minute call. On the call, we confirm the seats are still open, then you move the points from your Chase account while we're on the line (transfers are instant for Air France).",
+    "We book the seats in your Flying Blue account and pay the taxes on the card you choose.",
+    "You receive the confirmation the same day, and we keep watching the booking for schedule changes and better seats."
+  ],
+  "fine_print": [
+    "Award seats and fares change daily. Everything here is based on availability and fares as of November 12, 2026, and is confirmed again before any points are transferred.",
+    "Taxes and fees are estimates until the ticket is issued.",
+    "Points transfers from a credit card to an airline cannot be reversed, which is why we confirm seats first.",
+    "Points and miles are held in your own accounts; we never ask for your passwords."
+  ]
+}

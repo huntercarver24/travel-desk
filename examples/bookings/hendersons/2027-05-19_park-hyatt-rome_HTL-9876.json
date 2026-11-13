@@ -1,0 +1,19 @@
+{
+  "client": "hendersons",
+  "trip_name": "Rome anniversary",
+  "confirmation": "HTL-9876",
+  "type": "hotel",
+  "status": "booked",
+  "booking_date": "2026-11-20",
+  "hotel_name": "Park Hyatt Rome",
+  "program": "World of Hyatt",
+  "paid_with": "points",
+  "cost": { "points": 35000, "per_night": true },
+  "cash_price_at_booking": 950,
+  "checkin": "2027-05-19",
+  "checkout": "2027-05-24",
+  "room_type": "Park King",
+  "guests": 2,
+  "last_audited": null,
+  "notes": "Example booking."
+}

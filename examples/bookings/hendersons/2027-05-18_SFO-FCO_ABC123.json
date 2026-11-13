@@ -1,0 +1,23 @@
+{
+  "client": "hendersons",
+  "trip_name": "Rome anniversary",
+  "confirmation": "ABC123",
+  "ticket_numbers": [],
+  "type": "flight",
+  "status": "booked",
+  "booking_date": "2026-11-20",
+  "program": "Air France/KLM Flying Blue",
+  "paid_with": "points",
+  "cost": { "miles": 220000, "taxes_usd": 760 },
+  "cash_price_at_booking": 9800,
+  "passengers": 2,
+  "segments": [
+    { "airline": "AF", "flight": "AF83", "origin": "SFO", "destination": "CDG", "date": "2027-05-18", "departure": "15:40", "arrival": "11:15+1", "cabin": "business", "fare_class": "O", "seat": "2A, 2L", "aircraft": "777-300ER" },
+    { "airline": "AF", "flight": "AF1204", "origin": "CDG", "destination": "FCO", "date": "2027-05-19", "departure": "13:05", "arrival": "15:15", "cabin": "business", "fare_class": "O", "seat": "", "aircraft": "A320" }
+  ],
+  "hold_expires": null,
+  "last_audited": null,
+  "consult": "consults/2026-11-12_hendersons_SFO-FCO.md",
+  "notes": "Example booking. Outbound only; return would be its own file.",
+  "agent_notes": ""
+}

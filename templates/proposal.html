@@ -1,0 +1,205 @@
+<title>{{PAGE_TITLE}}</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Figtree:wght@400;500;600&display=swap">
+<style>
+  /* Layout: a letter-size travel proposal. One reading column, option cards side by side on a desk and stacked on a phone. The brand color comes from agency.json. */
+  :root {
+    --brand: {{BRAND}};
+    --brand-text: {{BRAND}};
+    --brand-tint: {{BRAND_TINT}};
+    --on-brand: #ffffff;
+    --paper: #eef1f4;
+    --sheet: #ffffff;
+    --ink: #17212b;
+    --ink-soft: #55626f;
+    --rule: #dbe1e7;
+    --good: #1f7a5c;
+    --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --font-body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --brand-text: {{BRAND_SOFT}};
+      --brand-tint: {{BRAND_TINT_DARK}};
+      --paper: #0e1216;
+      --sheet: #161c22;
+      --ink: #e7ecf0;
+      --ink-soft: #a3aeb9;
+      --rule: #2b353f;
+      --good: #5fc39b;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --brand-text: {{BRAND_SOFT}};
+    --brand-tint: {{BRAND_TINT_DARK}};
+    --paper: #0e1216;
+    --sheet: #161c22;
+    --ink: #e7ecf0;
+    --ink-soft: #a3aeb9;
+    --rule: #2b353f;
+    --good: #5fc39b;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: clamp(12px, 3vw, 40px);
+  }
+  .sheet {
+    --pad: clamp(20px, 5vw, 52px);
+    max-width: 50rem;
+    margin: 0 auto;
+    background: var(--sheet);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 40px -24px rgba(0,0,0,.35);
+    padding: 0 var(--pad) var(--pad);
+    overflow: hidden;
+  }
+
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; margin: 0; text-wrap: balance; color: var(--ink); }
+  h1 { font-size: clamp(2rem, 5vw, 2.9rem); font-weight: 500; letter-spacing: -0.01em; }
+  h2 { font-size: 1.45rem; margin-bottom: .75rem; }
+  h3 { font-size: 1.2rem; }
+  p { margin: 0 0 .85em; max-width: 42rem; }
+  p:last-child { margin-bottom: 0; }
+  .eyebrow { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); }
+
+  /* masthead: brand band across the top of the sheet */
+  .masthead {
+    margin: 0 calc(-1 * var(--pad)) 0;
+    padding: clamp(18px, 3vw, 28px) var(--pad);
+    background: var(--brand);
+    color: var(--on-brand);
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px;
+  }
+  .masthead .eyebrow { color: var(--on-brand); opacity: .78; }
+  .agency-name { font-family: var(--font-display); font-size: 1.55rem; font-weight: 600; line-height: 1.1; }
+  .tagline { opacity: .85; font-size: .92rem; margin-top: 2px; }
+  .prepared { text-align: right; min-width: 0; }
+  .prepared .client { font-weight: 600; font-size: 1.05rem; }
+  .prepared .date { opacity: .85; font-size: .92rem; }
+  @media (max-width: 560px) { .prepared { text-align: left; } }
+
+  .hero { padding-block: clamp(28px, 5vw, 44px) 8px; border-bottom: 1px solid var(--rule); }
+  .hero .eyebrow { color: var(--brand-text); margin-bottom: 10px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 14px 36px; margin: 22px 0 18px; padding: 0; }
+  .fact { min-width: 0; }
+  .facts dt { font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); }
+  .facts dd { margin: 2px 0 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  .section { padding-block: clamp(22px, 4vw, 34px); border-bottom: 1px solid var(--rule); }
+  .section:last-of-type { border-bottom: 0; }
+  .summary { font-size: 1.08rem; }
+
+  /* option cards */
+  .options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+  .option {
+    min-width: 0;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 18px 18px 16px;
+    display: flex; flex-direction: column; gap: 12px;
+    background: var(--sheet);
+  }
+  .option.recommended { border-color: var(--brand-text); background: var(--brand-tint); }
+  .option.recommended .eyebrow { color: var(--brand-text); }
+  .option-rows { margin: 0; display: grid; gap: 10px; }
+  .option-rows .row dt { font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); }
+  .option-rows .row dd { margin: 1px 0 0; overflow-wrap: anywhere; }
+  .option-rows .row:nth-of-type(n) dd { font-variant-numeric: tabular-nums; }
+
+  .benchmark {
+    margin-top: 16px;
+    padding: 14px 18px;
+    border-left: 3px solid var(--brand-text);
+    background: var(--brand-tint);
+    border-radius: 0 6px 6px 0;
+  }
+  .benchmark p { margin: 2px 0 0; font-weight: 500; }
+
+  ul.why, ol.steps, .fine ul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; max-width: 42rem; }
+  ol.steps li::marker { font-weight: 600; color: var(--brand-text); }
+  .fine { color: var(--ink-soft); font-size: .92rem; }
+  .fine h2 { font-size: 1.15rem; color: var(--ink); }
+  .fee { margin: 0; padding: 14px 0 0; font-weight: 500; }
+
+  .table-wrap { overflow-x: auto; }
+  table.points { border-collapse: collapse; width: 100%; max-width: 36rem; font-variant-numeric: tabular-nums; }
+  table.points th, table.points td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--rule); }
+  table.points th { font-size: .72rem; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  table.points .num { text-align: right; }
+
+  footer { padding-top: 26px; display: grid; gap: 4px; color: var(--ink-soft); font-size: .92rem; }
+  footer .sig { color: var(--ink); font-size: 1rem; }
+  footer .legal { margin-top: 10px; font-size: .82rem; }
+
+  a { color: var(--brand-text); }
+  :focus-visible { outline: 2px solid var(--brand-text); outline-offset: 2px; }
+
+  @media print {
+    :root, :root[data-theme="dark"] {
+      --brand-text: {{BRAND}};
+      --brand-tint: {{BRAND_TINT}};
+      --paper: #ffffff; --sheet: #ffffff; --ink: #17212b; --ink-soft: #55626f; --rule: #dbe1e7; --good: #1f7a5c;
+      color-scheme: light;
+    }
+    @page { size: letter; margin: 0.55in; }
+    body { background: #fff; }
+    .page { padding: 0; }
+    .sheet { max-width: none; box-shadow: none; border-radius: 0; padding: 0 0 12px; --pad: 0px; }
+    .masthead { margin: 0; padding: 18px 22px; border-radius: 6px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .option, .section, .benchmark, footer { break-inside: avoid; }
+    .option.recommended, .benchmark { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="page">
+  <div class="sheet">
+    <header class="masthead">
+      <div class="agency">
+        <div class="agency-name">{{AGENCY_NAME}}</div>
+        <div class="tagline">{{TAGLINE}}</div>
+      </div>
+      <div class="prepared">
+        <span class="eyebrow">Prepared for</span>
+        <div class="client">{{CLIENT_NAME}}</div>
+        <div class="date">{{PREPARED_ON}}</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">Travel proposal</span>
+      <h1>{{TRIP_TITLE}}</h1>
+      {{TRIP_FACTS}}
+    </section>
+
+    <section class="section summary">{{SUMMARY}}</section>
+
+    {{OPTIONS}}
+    {{BENCHMARK}}
+    {{WHY}}
+    {{POINTS}}
+    {{NEXT_STEPS}}
+    {{FEE}}
+    {{FINE_PRINT}}
+
+    <footer>
+      <div class="sig"><strong>{{AGENT_NAME}}</strong> · {{AGENCY_NAME}}</div>
+      <div class="contact">{{CONTACT}}</div>
+      <div class="legal">Prepared {{PREPARED_ON}}. Award seats and fares change daily. Everything in this proposal is confirmed again with you before any points are transferred or any ticket is issued.</div>
+    </footer>
+  </div>
+</div>

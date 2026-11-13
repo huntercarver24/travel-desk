@@ -1,0 +1,12 @@
+{
+  "name": "Sunrise Travel",
+  "agent_name": "Linda Carver",
+  "phone": "(555) 010-2000",
+  "email": "linda@sunrisetravel.example",
+  "website": "sunrisetravel.example",
+  "tagline": "Thoughtful trips, planned personally.",
+  "brand_color": "#1f4e79",
+  "award_booking_fee": "Award booking service: $150 per ticket, credited back if you book a cash fare through us.",
+  "home_airports": ["SFO", "OAK", "SJC"],
+  "notes": ""
+}

@@ -1,0 +1,32 @@
+{
+  "name": "The Patel family",
+  "slug": "patels",
+  "created": "2026-09-03",
+  "updated": "2026-10-30",
+  "contact": { "email": "", "phone": "" },
+  "home_airports": ["LAX"],
+  "travelers": [
+    { "name": "Priya", "type": "adult" },
+    { "name": "Raj", "type": "adult" },
+    { "name": "Asha", "type": "child" },
+    { "name": "Dev", "type": "child" }
+  ],
+  "default_cabin": "economy",
+  "cards": ["Chase Sapphire Preferred", "Southwest Rapid Rewards Priority"],
+  "balances": { "chase_ur": 64000, "southwest": 41000, "marriott": 90000 },
+  "balances_other": {},
+  "balances_as_of": "2026-10-30",
+  "preferences": {
+    "nonstop_only": true,
+    "max_stops": 0,
+    "no_redeyes": true,
+    "seat": "together",
+    "airlines_prefer": ["Southwest", "United"],
+    "airlines_avoid": ["Spirit", "Frontier"],
+    "notes": "Four seats together or nothing. Kids are 6 and 9."
+  },
+  "notes": [
+    "2026-09-03: Hawaii for the holidays, Dec 22 to Jan 2. Cash fares booked 2026-10-30.",
+    "2026-10-30: Asked about using Marriott points for the Maui stay next summer."
+  ]
+}

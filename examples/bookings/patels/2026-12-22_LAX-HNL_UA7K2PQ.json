@@ -1,0 +1,23 @@
+{
+  "client": "patels",
+  "trip_name": "Hawaii holidays",
+  "confirmation": "UA7K2PQ",
+  "ticket_numbers": [],
+  "type": "flight",
+  "status": "booked",
+  "booking_date": "2026-10-30",
+  "program": "United (cash)",
+  "paid_with": "cash",
+  "cost": { "cash_usd": 1556 },
+  "cash_price_at_booking": 1556,
+  "passengers": 4,
+  "segments": [
+    { "airline": "UA", "flight": "UA1205", "origin": "LAX", "destination": "HNL", "date": "2026-12-22", "departure": "09:10", "arrival": "13:05", "cabin": "economy", "fare_class": "S", "seat": "20A-D", "aircraft": "777-200" },
+    { "airline": "UA", "flight": "UA1700", "origin": "HNL", "destination": "LAX", "date": "2027-01-02", "departure": "21:55", "arrival": "05:45+1", "cabin": "economy", "fare_class": "S", "seat": "22A-D", "aircraft": "777-200" }
+  ],
+  "hold_expires": null,
+  "last_audited": "2026-11-01",
+  "consult": "consults/2026-10-28_patels_LAX-HNL.md",
+  "notes": "Example booking. Return is a red-eye; family accepted it for the fare.",
+  "agent_notes": "Commission on $1,556."
+}

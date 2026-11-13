@@ -1,0 +1,205 @@
+<title>Rome in Business Class · Sunrise Travel</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,500;6..72,600&family=Figtree:wght@400;500;600&display=swap">
+<style>
+  /* Layout: a letter-size travel proposal. One reading column, option cards side by side on a desk and stacked on a phone. The brand color comes from agency.json. */
+  :root {
+    --brand: #1f4e79;
+    --brand-text: #1f4e79;
+    --brand-tint: #e4eaef;
+    --on-brand: #ffffff;
+    --paper: #eef1f4;
+    --sheet: #ffffff;
+    --ink: #17212b;
+    --ink-soft: #55626f;
+    --rule: #dbe1e7;
+    --good: #1f7a5c;
+    --font-display: "Newsreader", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    --font-body: "Figtree", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --brand-text: #6d8ca8;
+      --brand-tint: #132433;
+      --paper: #0e1216;
+      --sheet: #161c22;
+      --ink: #e7ecf0;
+      --ink-soft: #a3aeb9;
+      --rule: #2b353f;
+      --good: #5fc39b;
+      color-scheme: dark;
+    }
+  }
+  :root[data-theme="dark"] {
+    --brand-text: #6d8ca8;
+    --brand-tint: #132433;
+    --paper: #0e1216;
+    --sheet: #161c22;
+    --ink: #e7ecf0;
+    --ink-soft: #a3aeb9;
+    --rule: #2b353f;
+    --good: #5fc39b;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  .page {
+    padding-left: max(16px, env(safe-area-inset-left, 0px));
+    padding-right: max(16px, env(safe-area-inset-right, 0px));
+    padding-block: clamp(12px, 3vw, 40px);
+  }
+  .sheet {
+    --pad: clamp(20px, 5vw, 52px);
+    max-width: 50rem;
+    margin: 0 auto;
+    background: var(--sheet);
+    border-radius: 10px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 12px 40px -24px rgba(0,0,0,.35);
+    padding: 0 var(--pad) var(--pad);
+    overflow: hidden;
+  }
+
+  h1, h2, h3 { font-family: var(--font-display); font-weight: 600; line-height: 1.15; margin: 0; text-wrap: balance; color: var(--ink); }
+  h1 { font-size: clamp(2rem, 5vw, 2.9rem); font-weight: 500; letter-spacing: -0.01em; }
+  h2 { font-size: 1.45rem; margin-bottom: .75rem; }
+  h3 { font-size: 1.2rem; }
+  p { margin: 0 0 .85em; max-width: 42rem; }
+  p:last-child { margin-bottom: 0; }
+  .eyebrow { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); }
+
+  /* masthead: brand band across the top of the sheet */
+  .masthead {
+    margin: 0 calc(-1 * var(--pad)) 0;
+    padding: clamp(18px, 3vw, 28px) var(--pad);
+    background: var(--brand);
+    color: var(--on-brand);
+    display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 12px 32px;
+  }
+  .masthead .eyebrow { color: var(--on-brand); opacity: .78; }
+  .agency-name { font-family: var(--font-display); font-size: 1.55rem; font-weight: 600; line-height: 1.1; }
+  .tagline { opacity: .85; font-size: .92rem; margin-top: 2px; }
+  .prepared { text-align: right; min-width: 0; }
+  .prepared .client { font-weight: 600; font-size: 1.05rem; }
+  .prepared .date { opacity: .85; font-size: .92rem; }
+  @media (max-width: 560px) { .prepared { text-align: left; } }
+
+  .hero { padding-block: clamp(28px, 5vw, 44px) 8px; border-bottom: 1px solid var(--rule); }
+  .hero .eyebrow { color: var(--brand-text); margin-bottom: 10px; }
+  .facts { display: flex; flex-wrap: wrap; gap: 14px 36px; margin: 22px 0 18px; padding: 0; }
+  .fact { min-width: 0; }
+  .facts dt { font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); }
+  .facts dd { margin: 2px 0 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+
+  .section { padding-block: clamp(22px, 4vw, 34px); border-bottom: 1px solid var(--rule); }
+  .section:last-of-type { border-bottom: 0; }
+  .summary { font-size: 1.08rem; }
+
+  /* option cards */
+  .options { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 16px; }
+  .option {
+    min-width: 0;
+    border: 1px solid var(--rule);
+    border-radius: 8px;
+    padding: 18px 18px 16px;
+    display: flex; flex-direction: column; gap: 12px;
+    background: var(--sheet);
+  }
+  .option.recommended { border-color: var(--brand-text); background: var(--brand-tint); }
+  .option.recommended .eyebrow { color: var(--brand-text); }
+  .option-rows { margin: 0; display: grid; gap: 10px; }
+  .option-rows .row dt { font-size: .72rem; font-weight: 600; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); }
+  .option-rows .row dd { margin: 1px 0 0; overflow-wrap: anywhere; }
+  .option-rows .row:nth-of-type(n) dd { font-variant-numeric: tabular-nums; }
+
+  .benchmark {
+    margin-top: 16px;
+    padding: 14px 18px;
+    border-left: 3px solid var(--brand-text);
+    background: var(--brand-tint);
+    border-radius: 0 6px 6px 0;
+  }
+  .benchmark p { margin: 2px 0 0; font-weight: 500; }
+
+  ul.why, ol.steps, .fine ul { margin: 0; padding-left: 1.2em; display: grid; gap: 8px; max-width: 42rem; }
+  ol.steps li::marker { font-weight: 600; color: var(--brand-text); }
+  .fine { color: var(--ink-soft); font-size: .92rem; }
+  .fine h2 { font-size: 1.15rem; color: var(--ink); }
+  .fee { margin: 0; padding: 14px 0 0; font-weight: 500; }
+
+  .table-wrap { overflow-x: auto; }
+  table.points { border-collapse: collapse; width: 100%; max-width: 36rem; font-variant-numeric: tabular-nums; }
+  table.points th, table.points td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--rule); }
+  table.points th { font-size: .72rem; letter-spacing: .09em; text-transform: uppercase; color: var(--ink-soft); font-weight: 600; }
+  table.points .num { text-align: right; }
+
+  footer { padding-top: 26px; display: grid; gap: 4px; color: var(--ink-soft); font-size: .92rem; }
+  footer .sig { color: var(--ink); font-size: 1rem; }
+  footer .legal { margin-top: 10px; font-size: .82rem; }
+
+  a { color: var(--brand-text); }
+  :focus-visible { outline: 2px solid var(--brand-text); outline-offset: 2px; }
+
+  @media print {
+    :root, :root[data-theme="dark"] {
+      --brand-text: #1f4e79;
+      --brand-tint: #e4eaef;
+      --paper: #ffffff; --sheet: #ffffff; --ink: #17212b; --ink-soft: #55626f; --rule: #dbe1e7; --good: #1f7a5c;
+      color-scheme: light;
+    }
+    @page { size: letter; margin: 0.55in; }
+    body { background: #fff; }
+    .page { padding: 0; }
+    .sheet { max-width: none; box-shadow: none; border-radius: 0; padding: 0 0 12px; --pad: 0px; }
+    .masthead { margin: 0; padding: 18px 22px; border-radius: 6px; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .option, .section, .benchmark, footer { break-inside: avoid; }
+    .option.recommended, .benchmark { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+
+<div class="page">
+  <div class="sheet">
+    <header class="masthead">
+      <div class="agency">
+        <div class="agency-name">Sunrise Travel</div>
+        <div class="tagline">Thoughtful trips, planned personally.</div>
+      </div>
+      <div class="prepared">
+        <span class="eyebrow">Prepared for</span>
+        <div class="client">Dana and Mark</div>
+        <div class="date">Thu, Nov 12, 2026</div>
+      </div>
+    </header>
+
+    <section class="hero">
+      <span class="eyebrow">Travel proposal</span>
+      <h1>Rome in Business Class</h1>
+      <dl class="facts"><div class="fact"><dt>Route</dt><dd>San Francisco → Rome</dd></div><div class="fact"><dt>Dates</dt><dd>May 18 – May 28, 2027</dd></div><div class="fact"><dt>Travelers</dt><dd>2 adults</dd></div><div class="fact"><dt>Cabin</dt><dd>Business class</dd></div><div class="fact"><dt>Flexibility</dt><dd>Within a day or two of these dates</dd></div></dl>
+    </section>
+
+    <section class="section summary"><p>Your Chase points can cover both business-class seats to Rome and back, with about $380 per person in taxes. Paying cash for the same seats runs about $4,900 per person, so this is one of the best uses of your points we&#x27;ve seen.</p></section>
+
+    <section class="section"><h2>Your options</h2><div class="options"><article class="option recommended"><div class="option-head"><span class="eyebrow">Recommended</span><h3>Air France business class via Flying Blue</h3></div><dl class="option-rows"><div class="row"><dt>How you&#x27;d book</dt><dd>Move 110,000 Chase points per person to Air France/KLM Flying Blue, then we book the seats in your Flying Blue account.</dd></div><div class="row"><dt>Routing</dt><dd>SFO → Paris → Rome outbound, Rome → Paris → SFO home. One change each way, lie-flat seats on the ocean legs.</dd></div><div class="row"><dt>Points used</dt><dd>110,000 Chase points per person (220,000 total)</dd></div><div class="row"><dt>Cash due</dt><dd>About $380 per person in taxes and fees</dd></div><div class="row"><dt>Value</dt><dd>Roughly 4.1 cents per point. Anything above 2 is a good use of Chase points.</dd></div><div class="row"><dt>Notes</dt><dd>Seats were available on your dates as of November 12. We confirm them again on the phone with you before any points move.</dd></div></dl></article><article class="option"><div class="option-head"><span class="eyebrow">Also good</span><h3>United Polaris via United MileagePlus</h3></div><dl class="option-rows"><div class="row"><dt>How you&#x27;d book</dt><dd>Move 72,000 Chase points per person to United, combined with the 16,000 United miles you already have.</dd></div><div class="row"><dt>Routing</dt><dd>Nonstop SFO → Rome on United, nonstop home.</dd></div><div class="row"><dt>Points used</dt><dd>88,000 United miles per person</dd></div><div class="row"><dt>Cash due</dt><dd>About $90 per person in taxes</dd></div><div class="row"><dt>Value</dt><dd>Roughly 5.4 cents per point, but only two seats showed and only on May 19 outbound.</dd></div><div class="row"><dt>Notes</dt><dd>Best value if the May 19 departure works for you.</dd></div></dl></article><article class="option"><div class="option-head"><span class="eyebrow">Cash</span><h3>Delta One business class, paid fare</h3></div><dl class="option-rows"><div class="row"><dt>How you&#x27;d book</dt><dd>We book it for you; no points involved.</dd></div><div class="row"><dt>Points used</dt><dd>None</dd></div><div class="row"><dt>Cash due</dt><dd>About $4,900 per person</dd></div><div class="row"><dt>Value</dt><dd>Keeps all 200,000 of your points for a future trip.</dd></div><div class="row"><dt>Notes</dt><dd>Refundable fares run higher; ask if you want that option.</dd></div></dl></article></div></section>
+    <aside class="benchmark"><span class="eyebrow">For comparison</span><p>The lowest business-class cash fare we found for these dates is about $4,900 per person round trip.</p></aside>
+    <section class="section"><h2>Why this works for you</h2><ul class="why"><li>Your points cover both seats with room to spare; you&#x27;d keep about 10,000 Chase points and all 80,000 Amex points.</li><li>No red-eye on the way out, which you asked us to avoid.</li><li>Air France&#x27;s business seat is a fully flat bed on both ocean legs.</li></ul></section>
+    <section class="section"><h2>Your points, before and after</h2><div class="table-wrap"><table class="points"><thead><tr><th>Program</th><th class="num">Today</th><th class="num">After booking</th></tr></thead><tbody><tr><td>Chase Ultimate Rewards</td><td class="num">120,000</td><td class="num">10,000</td></tr><tr><td>American Express Membership Rewards</td><td class="num">80,000</td><td class="num">80,000</td></tr><tr><td>United MileagePlus</td><td class="num">16,000</td><td class="num">16,000</td></tr></tbody></table></div></section>
+    <section class="section"><h2>What happens next</h2><ol class="steps"><li>Reply with the option you&#x27;d like, or call us with questions.</li><li>We schedule a 15-minute call. On the call, we confirm the seats are still open, then you move the points from your Chase account while we&#x27;re on the line (transfers are instant for Air France).</li><li>We book the seats in your Flying Blue account and pay the taxes on the card you choose.</li><li>You receive the confirmation the same day, and we keep watching the booking for schedule changes and better seats.</li></ol></section>
+    <p class="fee">Award booking service: $150 per ticket, credited back if you book a cash fare through us.</p>
+    <section class="section fine"><h2>Good to know</h2><ul><li>Award seats and fares change daily. Everything here is based on availability and fares as of November 12, 2026, and is confirmed again before any points are transferred.</li><li>Taxes and fees are estimates until the ticket is issued.</li><li>Points transfers from a credit card to an airline cannot be reversed, which is why we confirm seats first.</li><li>Points and miles are held in your own accounts; we never ask for your passwords.</li></ul></section>
+
+    <footer>
+      <div class="sig"><strong>Linda Carver</strong> · Sunrise Travel</div>
+      <div class="contact">(555) 010-2000 · linda@sunrisetravel.example · sunrisetravel.example</div>
+      <div class="legal">Prepared Thu, Nov 12, 2026. Award seats and fares change daily. Everything in this proposal is confirmed again with you before any points are transferred or any ticket is issued.</div>
+    </footer>
+  </div>
+</div>
