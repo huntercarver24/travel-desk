@@ -109,7 +109,7 @@ Write `proposals/<slug>_<ORIG>-<DEST>_<YYYY-MM-DD>.json` in the desk folder. The
 
 Notes on fields:
 
-- `fee`: leave out (or empty) to use `award_booking_fee` from `agency.json`; set to a string to override; set to `" "` (a single space) to suppress the fee line entirely.
+- `fee`: leave the key out to use `award_booking_fee` from `agency.json`; set it to a string to override; set it to `""` to leave the fee line off (for example when the recommendation is a cash fare and no award is booked).
 - `balances_after` and `points_snapshot` are alternatives; use `balances_after` when the recommendation uses points.
 - `agency` can be added to override agency.json fields for one proposal (rare).
 

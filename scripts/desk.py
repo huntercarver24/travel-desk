@@ -765,7 +765,9 @@ def render_proposal(spec: dict, ag: dict) -> str:
             f"<tbody>{rows}</tbody></table></div></section>"
         )
 
-    fee = spec.get("fee") or ag.get("award_booking_fee")
+    # A "fee" key in the spec wins even when empty (empty means: no fee line). Without the key, agency.json decides.
+    fee = spec["fee"] if "fee" in spec else ag.get("award_booking_fee")
+    fee = (fee or "").strip()
     fee_block = f'<p class="fee">{esc(fee)}</p>' if fee else ""
 
     fine = spec.get("fine_print") or []
