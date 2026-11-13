@@ -114,8 +114,10 @@ Test without installing, loading both plugins for one session:
 
 ```bash
 git clone https://github.com/borski/travel-hacking-toolkit ../travel-hacking-toolkit
-claude --plugin-dir ../travel-hacking-toolkit --plugin-dir .
+claude --add-dir ~/TravelDesk --plugin-dir ../travel-hacking-toolkit --plugin-dir .
 ```
+
+`--add-dir ~/TravelDesk` matters when you start from this folder: the skills read and write the desk, and without it every file access there asks for permission. Day to day the agent starts Claude Code inside `~/TravelDesk` (the installer's launcher does that), so the question never comes up.
 
 Validate the manifests:
 
